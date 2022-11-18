@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const CustomerScheme =  mongoose.Schema({
     document: {
         type:String,
-        require: true,
+        require: true
         
     },
 

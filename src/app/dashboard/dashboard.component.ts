@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductoService } from '../producto.service';
 import { Product} from './Product.model';
 
 @Component({
@@ -7,32 +8,32 @@ import { Product} from './Product.model';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-[x: string]: any;
-
+  
+  products?: Product[];
+  
   totalSales = 0
   trendingItem = "---" 
   inventoryLow = "---"
 
-  productSales1 = new Product (132452, "Hoodie", 120000, "M");
-  productSales2 = new Product (1, "Breeches", 190000, "L");
-  productSales3 = new Product (1, "Jacket", 320000, "M");
-
-  productTrending1 = new Product (1, "Breeches", 190000, "L");
-  productTrending2 = new Product (1, "Breeches", 190000, "L");
-  productTrending3 = new Product (1, "Breeches", 190000, "L");
-
-  productLowInventory1 = new Product (1, "Jacket", 320000, "M");
-  productLowInventory2 = new Product (1, "Jacket", 320000, "M");
-  productLowInventory3 = new Product (1, "Jacket", 320000, "M");
-
-
-
-  constructor() { }
+  constructor(private _productoService: ProductoService) { }
 
   ngOnInit(): void {
+    this.getProducts();
 
 
 
   }
+
+  private getProducts(): void {
+    this._productoService.getAll().subscribe({
+      next: (data =>{
+        this.products = data;
+        console.log(data);
+      })
+    })
+   
+  }
+
+  
 
 }

@@ -43,30 +43,30 @@
               <table class="table">
                   <thead>
                     <tr>
-                      <th scope="col">Code</th>
+                      <th scope="col">Type</th>
                       <th scope="col">Name</th>
                       <th scope="col">Price</th>
-                      <th scope="col">Remaining</th>
+                      <th scope="col">Size</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <th scope="row">{{productSales1.code}}</th>
-                      <td>{{productSales1.name}}</td>
-                      <td>{{productSales1.price}}</td>
-                      <td>{{productSales1.size}}</td>       
+                    <tr *ngFor="let producto of products">
+                      <td>{{producto.product}}</td>
+                      <td>{{producto.name}}</td>
+                      <td>{{producto.price}}</td>
+                      <td>{{producto.size}}</td>       
                     </tr>
                     <tr>
                       <th scope="row">2</th>
-                      <td>{{productSales1.name}}</td>
-                      <td>{{productSales2.price}}</td>
-                      <td>{{productSales3.size}}</td>
+                      <td>---</td>
+                      <td>---</td>
+                      <td>---</td>
                     </tr>
                     <tr>
                       <th scope="row">3</th>
-                      <td>{{productSales1.name}}</td>
-                      <td>{{productSales2.price}}</td>
-                      <td>{{productSales3.size}}</td>
+                      <td>---</td>
+                      <td>---</td>
+                      <td>---</td>
                     </tr>
                   </tbody>
               </table>
@@ -84,21 +84,21 @@
                   <tbody>
                     <tr>
                       <th scope="row">1</th>
-                      <td>{{productSales1.name}}</td>
-                      <td>{{productSales2.price}}</td>
-                      <td>{{productSales3.size}}</td>
+                      <td>---</td>
+                      <td>---</td>
+                      <td>---</td>
                     </tr>
                     <tr>
                       <th scope="row">2</th>
-                      <td>{{productTrending2.name}}</td>
-                      <td>{{productTrending2.price}}</td>
-                      <td>{{productTrending2.size}}</td>
+                      <td>---</td>
+                      <td>---</td>
+                      <td>---</td>
                     </tr>
                     <tr>
                       <th scope="row">3</th>
-                      <td>{{productTrending3.name}}</td>
-                      <td>{{productTrending3.price}}</td>
-                      <td>{{productTrending3.size}}</td>
+                      <td>---</td>
+                      <td>---</td>
+                      <td>---</td>
                     </tr>
                   </tbody>
               </table>
@@ -117,21 +117,21 @@
                   <tbody>
                     <tr>
                       <th scope="row">1</th>
-                      <td>{{productLowInventory1.name}}</td>
-                      <td>{{productLowInventory2.price}}</td>
-                      <td>{{productLowInventory3.size}}</td>
+                      <td>---</td>
+                      <td>---</td>
+                      <td>---</td>
                     </tr>
                     <tr>
                       <th scope="row">2</th>
-                      <td>{{productLowInventory1.name}}</td>
-                      <td>{{productLowInventory2.price}}</td>
-                      <td>{{productLowInventory3.size}}</td>
+                      <td>---</td>
+                      <td>---</td>
+                      <td>---</td>
                     </tr>
                     <tr>
                       <th scope="row">3</th>
-                      <td>{{productLowInventory1.name}}</td>
-                      <td>{{productLowInventory2.price}}</td>
-                      <td>{{productLowInventory3.size}}</td>
+                      <td>---</td>
+                      <td>---</td>
+                      <td>---</td>
                     </tr>
                   </tbody>
               </table>
