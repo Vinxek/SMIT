@@ -31,7 +31,15 @@ export class DashboardComponent implements OnInit {
         console.log(data);
       })
     })
-   
+  }
+
+  eliminarProducto(id: any) {
+    this._productoService.delete(id).subscribe(
+      data =>{
+        alert("Producto eliminado")
+        this.getProducts();
+      }
+    )
   }
 
   

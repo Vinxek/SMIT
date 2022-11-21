@@ -47,6 +47,7 @@
                       <th scope="col">Name</th>
                       <th scope="col">Price</th>
                       <th scope="col">Size</th>
+                      <th scope="col">btn</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -54,8 +55,11 @@
                       <td>{{producto.product}}</td>
                       <td>{{producto.name}}</td>
                       <td>{{producto.price}}</td>
-                      <td>{{producto.size}}</td>       
+                      <td>{{producto.size}}</td> 
+                      <td> <button type="button" class="btn btn-warning" (click)="eliminarProducto(producto._id)">Warning</button></td>  
                     </tr>
+
+                    
                     <tr>
                       <th scope="row">2</th>
                       <td>---</td>
