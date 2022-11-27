@@ -23,6 +23,10 @@ export class ProductoService {
     return this.http.get(`${this.baseUrl}/${id}`);
   }
 
+  public getName(name: any): Observable<Product> {
+    return this.http.get(`${this.baseUrl}/${name}`);
+  }
+
   public create(data: any): Observable<any>{
     return this.http.post(this.baseUrl, data);
   }
@@ -39,9 +43,10 @@ export class ProductoService {
     return this.http.delete(this.baseUrl);
   }
 
-  // findByTitle(title: any): Observable<Product[]> {
-  //   return this.http.get<Product[]>(`${baseUrl}?title=${title}`);
-  // }
+  findByTitle(product: any): Observable<Product[]> {
+    return this.http.get<Product[]>(`${this.baseUrl}?product=${product}`);
+  }
 
 
 }
+        

@@ -69,6 +69,22 @@ exports.obtenerProducto = async (req,res) => {
     }
 }
 
+exports.findall = (req, res) => {
+    const product = req.query.product;
+    var condition = product ? { product: { $regex: new RegExp(product), $options: "i"}} : {};
+    
+    Producto.find(condition)
+        .then(data =>{
+            res.send(data);
+        })
+        .catch(err =>{
+            res.status(500).send({
+                message:
+                err.message || "An Error has ocurred"
+            });
+        });
+};
+
 exports.eliminarProducto = async (req,res) => {
     try {
         let producto = await Producto.findById(req.params.id);
@@ -172,3 +188,5 @@ exports.deleteCustomer = async (req,res) => {
         res.status(500).send("hubo un error")
     }
 } 
+
+

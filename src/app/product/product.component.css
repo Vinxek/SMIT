@@ -1,11 +1,7 @@
+#sidebar {
+    padding: 10px;
+    background-color:  #f0f3f6;
 
-
-.form-register{
-    width: 300px;
-    background: grey;
-    padding: 30px;  
 }
 
-.btn btn-primary{
-    margin: auto;
-}
+
