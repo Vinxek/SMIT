@@ -1,4 +1,70 @@
-<div class="main-container d-flex">
+
+<form  [formGroup]="productForm" (ngSubmit)="agregarProducto()">
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <h2>Create Product</h2>
+          <section>
+            <div class="container">
+              <div class="card">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="cl-lg-6">
+                      <div class="input-group mb-3">
+                        <input type="text" formControlName="product" placeholder="Product" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                      </div>
+                      <div class="input-group mb-3">
+                        <input type="text" formControlName="name" placeholder="Name" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                      </div>
+                      <div class="input-group mb-3">
+                        <input type="text" formControlName="price" placeholder="Price" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                      </div>
+                      <div class="input-group mb-3">
+                        <input type="text" formControlName="size" placeholder="Size" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                      </div>
+                      <button type="submit" class="btn btn-secondary me-3"style="float:right;">Submit</button>
+                      <button type="reset" class="btn btn-secondary me-3"style="float:right;">Reset</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="col-lg-3"></div>
+      </div>
+    </div>
+  </section>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="main-container d-flex">
   <form id="sidebar" [formGroup]="productForm" (ngSubmit)="agregarProducto()">
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Product</label>
@@ -24,4 +90,4 @@
     </div>
     <button type="submit" class="btn btn-primary">Create</button>
   </form>
-</div>
+</div> -->
